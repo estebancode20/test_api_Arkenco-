@@ -28,5 +28,6 @@ docker ps -a
 
 OUTPUT:
 
-REPOSITORY   TAG       IMAGE ID       CREATED          SIZE
-crudcrm      latest    0b39286a8658   11 seconds ago   1.05GB
+CONTAINER ID   IMAGE          COMMAND                  CREATED         STATUS    PORTS     NAMES
+7d9062b3fb0a   crmtest2-web   "python manage.py ru…"   6 minutes ago   Created             crmtest2-web-1
+2fdb5d0ff61a   mysql:5.7      "docker-entrypoint.s…"   6 minutes ago   Created             crmtest2-db-1
