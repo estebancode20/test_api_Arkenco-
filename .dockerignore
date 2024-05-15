@@ -1,0 +1,21 @@
+# Ignora los directorios y archivos relacionados con el entorno virtual
+.env/
+venv/
+*.pyc
+
+# Ignora los archivos y directorios generados por Django
+*.sqlite3
+.DS_Store
+media/
+static/
+
+# Ignora los archivos SQL específicos de MySQL
+*.sql
+
+# Ignora los archivos y directorios relacionados con Git
+.git/
+.gitignore
+
+# Ignora archivos y directorios generados localmente
+__pycache__/
+db.sqlite3
