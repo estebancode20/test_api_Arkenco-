@@ -8,10 +8,12 @@ from django.db import models
 
 class Cliente(models.Model):
     id_cliente = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
-    nombre_empresa = models.CharField(max_length=255)
-    rut = models.CharField(max_length=255)
+    nombre_empresa = models.CharField(max_length=100)
+    rut = models.CharField(max_length=100)
     direccion = models.CharField(max_length=255)
     telefono = models.CharField(max_length=20)
+    usuario = models.CharField(max_length=100,unique= True)
+    password = models.CharField(max_length=100)
 
     def __str__(self):
         fila = f"{self.nombre_empresa} - rut: {self.rut}"
@@ -55,8 +57,8 @@ class Etapa(models.Model):
 
 class Prospecto(models.Model):
     id_prospecto = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
-    nombre = models.CharField(max_length=255)
-    email = models.CharField(max_length=255)
+    nombre = models.CharField(max_length=100)
+    email = models.CharField(max_length=100)
     telefono = models.CharField(max_length=20)
     sexo = models.IntegerField(choices=opciones_sexo)
     cliente_id = models.ForeignKey(Cliente, on_delete=models.CASCADE)
