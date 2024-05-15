@@ -4,4 +4,4 @@ from .models import Prospecto
 class ProspectoSerializer(serializers.ModelSerializer):
     class Meta: 
         model = Prospecto
-        field = '__all__'
+        fields = '__all__'

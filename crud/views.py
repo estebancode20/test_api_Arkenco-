@@ -4,7 +4,7 @@ from .serializer import ProspectoSerializer
 
 # Create your views here.
 
-class ProspectoViewSet(viewsets.ModelsViewset):
+class ProspectoViewSet(viewsets.ModelViewSet):
     queryset = Prospecto.objects.all()
     serializer_class = ProspectoSerializer
 
